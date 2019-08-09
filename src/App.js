@@ -4,7 +4,7 @@ import Androids from "./components/Androids";
 import Tablets from "./components/Tablets";
 import Header from "./components/Header";
 import {Spring} from "react-spring/renderprops-universal";
-import Fade from "react-reveal";
+
 
 class App extends Component {
     constructor(props){
@@ -34,7 +34,7 @@ class App extends Component {
     }
 
     showAll = () => {
-        if ( !this.state.showAll ) {
+        if ( this.state.showAll ) {
             return(
                 <Spring
                     from={{opacity: 0}}
