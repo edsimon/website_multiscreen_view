@@ -4,7 +4,7 @@ import Androids from "./components/Androids";
 import Tablets from "./components/Tablets";
 import Header from "./components/Header";
 import {Spring} from "react-spring/renderprops-universal";
-
+import { HashRouter } from "react-router-dom";
 
 class App extends Component {
     constructor(props){
@@ -26,10 +26,12 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <Header setUrl={this.setUrl}/>
-                {this.showAll()}
-            </div>
+            <HashRouter basename='/'>
+                <div className="App">
+                    <Header setUrl={this.setUrl}/>
+                    {this.showAll()}
+                </div>
+            </HashRouter>
         );
     }
 
